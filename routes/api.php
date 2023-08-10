@@ -21,5 +21,5 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::prefix('v1')->group(function () {
-    Route::apiResource(name: 'users', controller: App\Http\Controllers\UserController::class);
+    Route::apiResource(name: 'users', controller: App\Http\Controllers\UserController::class)->only(['index']);
 });
